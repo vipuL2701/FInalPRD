@@ -4,7 +4,7 @@ import email_icon from "./assets/email.png"
 import user_icon from "./assets/person.png"
 import password_icon from "./assets/password.png"
 
-function Login() {
+const Login =() => {
   const [action,setAction] = useState ("Register")
 
   return (
