@@ -1,0 +1,27 @@
+.footer {
+  position: fixed ;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  
+  background-color: rgb(88, 75, 75);
+  color: white;
+  text-align: center;
+
+}
+
+.footer-content {
+  
+  text-align: left;
+  font-size: 13px;
+  color: red;
+
+
+}
+
+
+.footer p {
+  margin: 0;
+}
+
+
