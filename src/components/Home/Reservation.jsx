@@ -1,43 +1,75 @@
-import React from 'react'
-import reserv from '../assets/reserv.jpg'
-import './Reservation.css'
+import React, { useState } from 'react';
+import './Reservation.css';
 
-const Reservation = () => {
+const BookTable = () => {
+  const [name, setName] = useState('');
+  const [date, setDate] = useState('');
+  const [time, setTime] = useState('');
+  const [number, setNumber] = useState('');
+  const [person, setPerson] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Booking submitted:', { name, date, time, number, person });
+  };
+
   return (
-    <>
-  <div className='reserv'>
-   
+    <div className="book-table-container">
+      <h2>Reservation</h2>
+      <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          placeholder= "Name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          required
+        />
 
-      <h1>RESERVATION</h1>
-      
+        <label htmlFor="date">Date:</label>
+        <input
+          type="date"
+          id="date"
+          placeholder= "Date"
+          value={date}
+          onChange={(e) => setDate(e.target.value)}
+          required
+        />
 
-      <div className="input">
-     🧔
-       <input type='text' placeholder='Customer Name'/>
-      </div>
-      <div className="input">
-     📞
-       <input type='text' placeholder='Phone Number'/>
-      </div>
-      <div className="input">
-      📧
-      <input type='text' placeholder='Email Address'/>
-      </div>
-      <div className="input">
-      👪
-      <input type='text' placeholder='Person Count'/>
-      </div>
-      <div className="input">
-    📅
-      <input type='text' placeholder='Booking Date'/>
-      </div>
-      <div className='comment'>
-      <input type='text' placeholder='Any Comment'/>
-      </div>
- 
+        <label htmlFor="time">Time:</label>
+        <input
+          type="time"
+          id="time"
+          placeholder= "Time"
+          value={time}
+          onChange={(e) => setTime(e.target.value)}
+          required
+        />
+
+        <label htmlFor="number">Phone Number:</label>
+        <input
+          type="text"
+          id="number"
+          placeholder='Phone Number'
+          value={number}
+          onChange={(e) => setNumber(e.target.value)}
+          required
+        />
+
+       <lable htmlFor="person">Person Count</lable>
+       <input
+         type='text'
+         id='person'
+         placeholder='Persons Count'
+         value={person}
+         onChange={(e) => setPerson(e.target.value)}
+         required
+       />
+        <button type="submit">Book Now</button>
+      </form>
     </div>
-    </>
-  )
-}
+  );
+};
 
-export default Reservation
+export default BookTable;
