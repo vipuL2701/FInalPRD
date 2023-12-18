@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Reservation.css';
 
-const BookTable = () => {
+const Reservation = () => {
   const [name, setName] = useState('');
   const [date, setDate] = useState('');
   const [time, setTime] = useState('');
@@ -72,4 +72,4 @@ const BookTable = () => {
   );
 };
 
-export default BookTable;
+export default Reservation;

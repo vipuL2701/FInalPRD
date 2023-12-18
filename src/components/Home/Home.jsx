@@ -5,6 +5,8 @@ import pin from '../assets/pin.jpg';
 import image from '../assets/image1.png';
 import Reservation from './Reservation';
 import reserv from '../assets/reserv.jpg';
+import Download from './download';
+
 
 const Home = () => {
 
@@ -39,6 +41,9 @@ const Home = () => {
      <img src={reserv} className='reserv'/> 
      <Reservation />
      </div>
+     <div>
+      <Download />
+     </div>   
     </>
   ); 
 };
