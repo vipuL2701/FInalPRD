@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Home.css'
-import pin from '../assets/pin.jpg'
-import image from '../assets/image1.png'
+import './Home.css';
+import pin from '../assets/pin.jpg';
+import image from '../assets/image1.png';
 import Reservation from './Reservation';
+import reserv from '../assets/reserv.jpg';
 
 const Home = () => {
 
@@ -35,6 +36,7 @@ const Home = () => {
       <button class="button1" onClick={handleSearch}>TAKEWAY</button>
      </div>
      <div >
+     <img src={reserv} className='reserv'/> 
      <Reservation />
      </div>
     </>
