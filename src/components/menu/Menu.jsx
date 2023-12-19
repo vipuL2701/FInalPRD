@@ -12,7 +12,13 @@ function Menu() {
   ];
   return (
   <>
+  
   <div className='back'>
+    <img src={top} className='tops' />
+     <div className='text'>
+        Namaste<br />
+        Welcome
+     </div>
     <div>
     <Content items={menuItems} />
     </div>
